@@ -7,7 +7,7 @@ import Editable from "./Components/Editabled/Editable";
 
 function App() {
   const [boards, setBoards] = useState(
-    JSON.parse(localStorage.getItem("prac-kanban")) || []
+    JSON.parse(localStorage.getItem("key")) || []
   );
 
   const [targetCard, setTargetCard] = useState({
@@ -117,13 +117,13 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem("prac-kanban", JSON.stringify(boards));
+    localStorage.setItem("key", JSON.stringify(boards));
   }, [boards]);
 
   return (
     <div className="app">
       <div className="app_nav">
-        <h1>Kanban Board</h1>
+        <h1>Archana Board</h1>
       </div>
       <div className="app_boards_container">
         <div className="app_boards">
